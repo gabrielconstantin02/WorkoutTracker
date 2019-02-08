@@ -1,6 +1,6 @@
 # WorkoutTracker
 
-**WorkoutTracker** is a free,modern and light-weight android application designed for gym enthusiasts and also for people who just like working out.
+**WorkoutTracker** is a free,modern and light-weight android application designed for gym enthusiasts and also for people who  like working out and tracking their prograss at the same time.
 
 ### Features
 
