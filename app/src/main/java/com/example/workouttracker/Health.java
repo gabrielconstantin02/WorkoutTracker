@@ -1,4 +1,12 @@
 package com.example.workouttracker;
 
-public class Health {
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+public class Health extends AppCompatActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.health);
+    }
 }
