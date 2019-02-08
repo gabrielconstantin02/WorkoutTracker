@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_workout) {
+       /* if (id == R.id.nav_workout) {
             Intent intent = new Intent(this, Workout.class);
             startActivity(intent);
             finish();
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Share.class);
             startActivity(intent);
             finish();
-        }
+        }*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
