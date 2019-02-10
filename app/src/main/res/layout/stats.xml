@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    android:background="@drawable/mainbackground"
-    tools:showIn="@layout/app_bar_main">
+    tools:context=".Stats"
+    android:background="@drawable/mainbackground">
 
     <TextView
         android:id="@id/title"
