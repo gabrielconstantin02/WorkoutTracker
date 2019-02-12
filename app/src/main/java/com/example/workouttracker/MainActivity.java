@@ -86,8 +86,11 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation item
         int id = item.getItemId();
-
-        if (id == R.id.nav_workout) {
+        if(id == R.id.nav_home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }else if (id == R.id.nav_workout) {
             Intent intent = new Intent(this, Workout.class);
             startActivity(intent);
             finish();
