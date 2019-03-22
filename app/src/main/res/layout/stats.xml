@@ -7,7 +7,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Stats"
     android:background="@drawable/mainbackground">
-    
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton13"
         android:layout_width="58dp"
