@@ -19,12 +19,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Workout extends AppCompatActivity{
-    SharedPreferences preferences ;
-    SharedPreferences.Editor editor;
+    SharedPreferences preferences ; //Save key-value data
+    SharedPreferences.Editor editor;    //Edit key-value data
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.workout);
+        setContentView(R.layout.workout);   //set the layout to workout xml file
         /*SharedPreferences preferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         int myNumber;
@@ -38,7 +38,7 @@ public class Workout extends AppCompatActivity{
         editor = preferences.edit();
         show();
     }
-    public void update(){
+    public void update(){   //Update the display after some modifications were effectuated by the client
         EditText c = (EditText) findViewById(R.id.editText);
         String ex = c.getText().toString();
         editor.putString("ex1",ex);
@@ -53,7 +53,7 @@ public class Workout extends AppCompatActivity{
         editor.putString("ex4",ex);
         editor.commit();
     }
-    public void show(){
+    public void show(){ //Function to display the text and the numbers
         int myNumber;
         myNumber = preferences.getInt("c1", 0);
         TextView c = (TextView) findViewById(R.id.count1);
@@ -81,6 +81,7 @@ public class Workout extends AppCompatActivity{
         c = (EditText) findViewById(R.id.editText4);
         c.setText(ex);
     }
+    // Add functions implement the adding operation for each button
     public void Add1(View view){
         int myNumber;
         myNumber = preferences.getInt("c1", 0);
@@ -121,6 +122,7 @@ public class Workout extends AppCompatActivity{
         editor.commit();
         update();
     }
+    //Delete functions for each button
     public void Del1(View view){
         int myNumber;
         myNumber = preferences.getInt("c1", 0);
@@ -161,6 +163,7 @@ public class Workout extends AppCompatActivity{
         editor.commit();
         update();
     }
+    //Go back to main menu
     public void onBackPressed(View view) {
         EditText c = (EditText) findViewById(R.id.editText);
         String ex = c.getText().toString();
@@ -174,9 +177,9 @@ public class Workout extends AppCompatActivity{
         c = (EditText) findViewById(R.id.editText4);
         ex = c.getText().toString();
         editor.putString("ex4",ex);
-        editor.commit();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        editor.commit();    //Save the data
+        Intent intent = new Intent(this, MainActivity.class);   //Manifest my intention to move to main menu
+        startActivity(intent);  //Start the main menu
+        finish();   //Terminate this activity
     }
 }
