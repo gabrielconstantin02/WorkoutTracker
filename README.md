@@ -23,7 +23,7 @@ The app contains 5 main functions:
 
 ### Documentation
 
-The [GitHub Wiki](https://github.com/Kira050200/WorkoutTracker/wiki)
+The [GitHub Wiki](https://github.com/Kira060200/WorkoutTracker/wiki)
 
 ### License
 
