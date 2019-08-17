@@ -67,7 +67,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="Water cosumed/day:"
+        android:text="Water consumed/day:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toEndOf="@+id/input_water"
