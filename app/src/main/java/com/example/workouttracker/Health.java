@@ -21,6 +21,7 @@ public class Health extends AppCompatActivity {
         setContentView(R.layout.health);
         preferences = getSharedPreferences("my_pref", MODE_PRIVATE);
         editor = preferences.edit();
+
     }
     public void onBackPressed(View view) {
         Intent intent = new Intent(this, MainActivity.class);

@@ -9,7 +9,7 @@
     android:background="@drawable/mainbackground">
 
     <TextView
-        android:id="@+id/water_monthly"
+        android:id="@+id/water_month"
         android:layout_width="152dp"
         android:layout_height="35dp"
         android:layout_marginStart="8dp"
@@ -71,6 +71,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toEndOf="@+id/input_water"
-        app:layout_constraintTop_toBottomOf="@+id/water_monthly" />
+        app:layout_constraintTop_toBottomOf="@+id/water_month" />
 
 </android.support.constraint.ConstraintLayout>
