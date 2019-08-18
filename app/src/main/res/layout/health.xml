@@ -8,18 +8,6 @@
     tools:context=".Health"
     android:background="@drawable/mainbackground">
 
-    <TextView
-        android:id="@+id/water_month"
-        android:layout_width="190dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="28dp"
-        android:text="Water consumed this month:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/water_per_day" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton13"
         android:layout_width="58dp"
@@ -31,65 +19,50 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
-    <EditText
-        android:id="@+id/input_water"
-        android:layout_width="280dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Input consumed water(L)"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/water_today" />
-
-    <TextView
-        android:id="@+id/water_today"
-        android:layout_width="285dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="72dp"
-        android:text="Water consumed today:"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/water_per_day"
-        android:layout_width="187dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+    <Button
+        android:id="@+id/active_time"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        android:text="Water consumed/day:"
-        android:textSize="18sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Active Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/water" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="119dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="60dp"
-        android:onClick="onDone"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="253dp"
-        android:layout_height="44dp"
+        android:id="@+id/sleep"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="28dp"
-        android:text="Stats:"
-        android:textSize="26sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Sleep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_water" />
+        app:layout_constraintTop_toBottomOf="@+id/active_time" />
+
+    <Button
+        android:id="@+id/water"
+        android:layout_width="180dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Water"
+        android:onClick="onWater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
