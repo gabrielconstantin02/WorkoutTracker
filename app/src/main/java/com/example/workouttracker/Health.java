@@ -71,6 +71,10 @@ public class Health extends AppCompatActivity {
                         pqt.setText("Water consumed today:"+String.valueOf(water_today));
                         //increment water intake per day and active time
                     } else {
+                        if (Calendar.getInstance().get(Calendar.DAY_OF_MONTH) == 1) {
+                            editor.putFloat("water month", quantity);
+                            editor.commit();
+                        }
                         editor.putString("myDate", formattedDate);
                         editor.commit();
                         pqt.setText("Water consumed today:"+String.valueOf(quantity));
