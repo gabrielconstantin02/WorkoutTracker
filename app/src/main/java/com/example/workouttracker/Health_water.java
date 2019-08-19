@@ -26,6 +26,7 @@ public class Health_water extends AppCompatActivity {
         setContentView(R.layout.health_water);
         preferences = getSharedPreferences("my_pref", MODE_PRIVATE);
         editor = preferences.edit();
+        day=preferences.getInt("water day",1);
         total_quantity=preferences.getFloat("water per day",0);
         TextView mqt=(TextView) findViewById(R.id.water_month);
         float water_month=preferences.getFloat("water month",0);
@@ -81,6 +82,8 @@ public class Health_water extends AppCompatActivity {
                 editor.putFloat("water today",quantity);
                 editor.commit();
                 day++;
+                editor.putInt("water day",day);
+                editor.commit();
                 //save this values to another category like weekly water intake
             }
             TextView mqt=(TextView) findViewById(R.id.water_month);

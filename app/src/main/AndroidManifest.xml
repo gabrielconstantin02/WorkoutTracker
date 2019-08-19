@@ -29,6 +29,7 @@
         <activity android:name=".Share" />
         <activity android:name=".Stats" />
         <activity android:name=".Health_water" />
+        <activity android:name=".Health_active"/>
     </application>
 
 </manifest>
