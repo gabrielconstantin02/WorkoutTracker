@@ -48,11 +48,11 @@ public class Health_active extends AppCompatActivity {
 
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
         String formattedDate = df.format(c);
-        String myDate = null;
+        String myDateActive = null;
         Log.d("CurrentDate",formattedDate);
         try {
-            myDate = preferences.getString("myDate", "16-Aug-2019");
-            Log.d("SavedDate",myDate);
+            myDateActive = preferences.getString("myDateActive", "16-Aug-2019");
+            Log.d("SavedDate",myDateActive);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -64,7 +64,7 @@ public class Health_active extends AppCompatActivity {
             TextView pqt = (TextView) findViewById(R.id.active_today);
             float active_today=preferences.getFloat("active today",0);
             //pqt.setText(String.valueOf(active));
-            if (formattedDate.equals(myDate)||myDate.equals("16-Aug-2019")) {
+            if (formattedDate.equals(myDateActive)||myDateActive.equals("16-Aug-2019")) {
                 //Float active_today=Float.valueOf(pqt.getText().toString());
                 Log.d("active",String.valueOf(active_today));
                 active_today=quantity+active_today;
@@ -76,7 +76,7 @@ public class Health_active extends AppCompatActivity {
                     editor.putFloat("active month", quantity);
                     editor.commit();
                 }
-                editor.putString("myDate", formattedDate);
+                editor.putString("myDateActive", formattedDate);
                 editor.commit();
                 pqt.setText("active time today:"+String.valueOf(quantity));
                 editor.putFloat("active today",quantity);

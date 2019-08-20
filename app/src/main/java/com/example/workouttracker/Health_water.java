@@ -48,11 +48,11 @@ public class Health_water extends AppCompatActivity {
 
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
         String formattedDate = df.format(c);
-        String myDate = null;
+        String myDateWater = null;
         Log.d("CurrentDate",formattedDate);
         try {
-            myDate = preferences.getString("myDate", "16-Aug-2019");
-            Log.d("SavedDate",myDate);
+            myDateWater = preferences.getString("myDateWater", "16-Aug-2019");
+            Log.d("SavedDate",myDateWater);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -64,7 +64,7 @@ public class Health_water extends AppCompatActivity {
             TextView pqt = (TextView) findViewById(R.id.water_today);
             float water_today=preferences.getFloat("water today",0);
             //pqt.setText(String.valueOf(water));
-            if (formattedDate.equals(myDate)||myDate.equals("16-Aug-2019")) {
+            if (formattedDate.equals(myDateWater)||myDateWater.equals("16-Aug-2019")) {
                 //Float water_today=Float.valueOf(pqt.getText().toString());
                 Log.d("water",String.valueOf(water_today));
                 water_today=quantity+water_today;
@@ -76,7 +76,7 @@ public class Health_water extends AppCompatActivity {
                     editor.putFloat("water month", quantity);
                     editor.commit();
                 }
-                editor.putString("myDate", formattedDate);
+                editor.putString("myDateWater", formattedDate);
                 editor.commit();
                 pqt.setText("Water consumed today:"+String.valueOf(quantity));
                 editor.putFloat("water today",quantity);

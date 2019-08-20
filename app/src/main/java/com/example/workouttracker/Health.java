@@ -31,6 +31,11 @@ public class Health extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void onSleep(View view){
+        Intent intent = new Intent(this,Health_sleep.class);
+        startActivity(intent);
+        finish();
+    }
     public void onActive(View view){
         Intent intent=new Intent(this,Health_active.class);
         startActivity(intent);
